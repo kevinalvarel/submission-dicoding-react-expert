@@ -1,0 +1,63 @@
+.leaderboard-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.leaderboard-page__header {
+  text-align: center;
+  margin-bottom: 32px;
+  animation: fadeInUp 0.4s ease;
+}
+
+.leaderboard-page__icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.leaderboard-page__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0 0 6px 0;
+}
+
+.leaderboard-page__subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.leaderboard-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leaderboard-page__empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .leaderboard-page {
+    padding: 20px 16px;
+  }
+
+  .leaderboard-page__title {
+    font-size: 22px;
+  }
+}
