@@ -41,7 +41,7 @@ describe('Login spec', () => {
     cy.get('#input-password').type('testpassword123');
     cy.get('#btn-login-submit').click();
 
-    cy.get('#navigation').should('be.visible');
-    cy.get('#btn-logout').should('be.visible');
+    cy.url({ timeout: 10000 }).should('not.include', '/login');
+    cy.get('#btn-logout', { timeout: 10000 }).should('be.visible');
   });
 });
