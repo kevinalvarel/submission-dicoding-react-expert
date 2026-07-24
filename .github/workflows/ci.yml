@@ -24,3 +24,5 @@ jobs:
         run: npm run ci:test
       - name: Run E2E tests
         run: npm run e2e
+        env:
+          BROWSER: none
