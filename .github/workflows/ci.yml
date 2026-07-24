@@ -14,13 +14,29 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 18
+
+      - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+          cache: "npm"
+
+      - name: Cache Cypress binary
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            cypress-${{ runner.os }}-
+
       - name: Install dependencies
         run: npm install
+
       - name: Run unit tests
         run: npm run ci:test
+
       - name: Run E2E tests
         run: npm run e2e
+        env:
+          BROWSER: none
+          CI: true
