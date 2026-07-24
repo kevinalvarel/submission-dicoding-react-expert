@@ -3,11 +3,12 @@
 }
 
 .category-filter__title {
-  font-size: 13px;
-  font-weight: 600;
-  color: #64748b;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   margin: 0 0 12px 0;
 }
 
@@ -19,10 +20,10 @@
 
 .category-filter__chip {
   padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  background: rgba(30, 41, 59, 0.5);
-  color: #94a3b8;
+  border-radius: 6px;
+  border: 1px solid var(--border-muted);
+  background: var(--bg-card);
+  color: var(--text-secondary);
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
@@ -31,25 +32,20 @@
 }
 
 .category-filter__chip:hover {
-  border-color: rgba(99, 102, 241, 0.3);
-  color: #a5b4fc;
-  background: rgba(99, 102, 241, 0.08);
+  border-color: var(--border-active);
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
 }
 
 .category-filter__chip--active {
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.2),
-    rgba(139, 92, 246, 0.2)
-  );
-  border-color: rgba(99, 102, 241, 0.4);
-  color: #a5b4fc;
+  background: var(--accent-white);
+  border-color: var(--accent-white);
+  color: var(--accent-black);
+  font-weight: 600;
 }
 
 .category-filter__chip--active:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.25),
-    rgba(139, 92, 246, 0.25)
-  );
+  background: #e4e4e7;
+  border-color: #e4e4e7;
+  color: var(--accent-black);
 }
