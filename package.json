@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "e2e": "start-server-and-test start http-get://127.0.0.1:3000 cy:run",
+    "serve": "npx -y serve -s build -l 3000",
+    "e2e": "npm run build && start-server-and-test serve http-get://127.0.0.1:3000 cy:run",
     "cy:run": "cypress run",
     "ci:test": "react-scripts test --watchAll=false"
   },
