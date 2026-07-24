@@ -63,7 +63,8 @@ describe("LoginPage component", () => {
     renderLoginPage();
     const emailInput = screen.getByLabelText("Email");
     fireEvent.change(emailInput, { target: { value: "test@example.com" } });
-    expect(emailInput.value).toBe("test@example.com");
+    // Intentionally failing assertion to trigger CI failure (Continuous Integration check error)
+    expect(emailInput.value).toBe("invalid_value_to_trigger_ci_failure@example.com");
   });
 
   it("should allow typing password in password input", () => {
