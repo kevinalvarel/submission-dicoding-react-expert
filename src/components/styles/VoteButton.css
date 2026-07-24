@@ -1,12 +1,12 @@
 .vote-button {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   padding: 4px 10px;
   border-radius: 6px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  background: rgba(30, 41, 59, 0.5);
-  color: #64748b;
+  border: 1px solid var(--border-muted);
+  background: var(--bg-surface);
+  color: var(--text-muted);
   font-size: 13px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -14,12 +14,13 @@
 }
 
 .vote-button:hover {
-  border-color: rgba(148, 163, 184, 0.3);
-  background: rgba(30, 41, 59, 0.8);
+  border-color: var(--border-active);
+  color: var(--text-primary);
+  background: var(--bg-surface-hover);
 }
 
 .vote-button__icon {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1;
 }
 
@@ -29,23 +30,25 @@
 }
 
 .vote-button--up-active {
-  color: #34d399;
-  background: rgba(52, 211, 153, 0.1);
-  border-color: rgba(52, 211, 153, 0.3);
+  color: var(--accent-black);
+  background: var(--accent-white);
+  border-color: var(--accent-white);
 }
 
 .vote-button--up-active:hover {
-  background: rgba(52, 211, 153, 0.15);
-  border-color: rgba(52, 211, 153, 0.4);
+  background: #e4e4e7;
+  border-color: #e4e4e7;
+  color: var(--accent-black);
 }
 
 .vote-button--down-active {
-  color: #f87171;
-  background: rgba(248, 113, 113, 0.1);
-  border-color: rgba(248, 113, 113, 0.3);
+  color: var(--accent-white);
+  background: #27272a;
+  border-color: var(--border-active);
 }
 
 .vote-button--down-active:hover {
-  background: rgba(248, 113, 113, 0.15);
-  border-color: rgba(248, 113, 113, 0.4);
+  background: #3f3f46;
+  border-color: var(--accent-white);
+  color: var(--accent-white);
 }
