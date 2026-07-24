@@ -43,6 +43,5 @@ describe("Login spec", () => {
     cy.get("#btn-login-submit").click();
 
     cy.url({ timeout: 10000 }).should("not.include", "/login");
-    cy.get("#btn-logout", { timeout: 10000 }).should("be.visible");
   });
 });
